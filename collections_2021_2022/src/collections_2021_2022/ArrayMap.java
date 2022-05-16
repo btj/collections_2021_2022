@@ -16,7 +16,7 @@ public class ArrayMap implements Map {
 	 *        |        .count() == entries.size()
 	 * @representationObject
 	 */
-	private ArrayList entries;
+	private ArrayList entries = new ArrayList();
 	
 	@Override
 	public Set entrySet() {

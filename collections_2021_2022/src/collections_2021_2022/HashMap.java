@@ -20,11 +20,10 @@ public class HashMap implements Map {
 	private Map[] buckets;
 	
 	/**
-	 * @pre | 1 < capacity
 	 * @post | size() == 0
 	 */
 	public HashMap(int capacity) {
-		buckets = new Map[capacity];
+		buckets = new Map[Math.max(1, capacity)];
 		for (int i = 0; i < buckets.length; i++)
 			buckets[i] = new ArrayMap();
 	}

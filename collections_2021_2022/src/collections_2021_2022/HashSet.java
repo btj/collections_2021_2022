@@ -25,12 +25,10 @@ public class HashSet implements Set {
 	}
 	
 	/**
-	 * @pre | 1 <= capacity
-	 * 
 	 * @post | size() == 0
 	 */
 	public HashSet(int capacity) {
-		buckets = new Set[capacity];
+		buckets = new Set[Math.max(1, capacity)];
 		for (int i = 0; i < buckets.length; i++)
 			buckets[i] = new ArraySet();
 	}
